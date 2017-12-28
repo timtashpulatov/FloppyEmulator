@@ -47,8 +47,8 @@ $Comp
 L STM32F405RGTx U?
 U 1 1 5A44968C
 P 8575 5200
-F 0 "U?" H 8575 3114 50  0000 C CNN
-F 1 "STM32F405RGTx" H 8575 3023 50  0000 C CNN
+F 0 "U?" H 8575 2925 50  0000 C CNN
+F 1 "STM32F405RGTx" H 8575 2800 50  0000 C CNN
 F 2 "LQFP64" H 12775 7075 50  0001 R TNN
 F 3 "" H 8575 5200 50  0001 C CNN
 	1    8575 5200
@@ -123,11 +123,11 @@ SPI3_NSS
 Wire Wire Line
 	12875 5100 13100 5100
 Text GLabel 4000 6300 0    50   Output ~ 0
-SPI2_SCK
+SPI3_SCK
 Text GLabel 4000 6400 0    50   Input ~ 0
-SPI2_MISO
+SPI3_MISO
 Text GLabel 4000 6500 0    50   Output ~ 0
-SPI2_MOSI
+SPI3_MOSI
 Wire Wire Line
 	4275 6300 4000 6300
 Wire Wire Line
@@ -142,4 +142,112 @@ Text Notes 1175 3025 0    60   ~ 0
 Amiga Drive ID readout:\n\n- turn Select off\n- turn Motor on and off\n- pulse Select and read ID bits on Ready line
 Text Notes 5800 2625 0    60   ~ 0
 2 ??? Disk Change Detect on Shugart Interface or Density Select on IBM PC\n4 ???\n6 ??? Can be Drive Select 3 on Amiga\n8 <-- Index\n10 --> Motor Enable A\n12 --> Drive Select B\n14 --> Drive Select A\n16 --> Motor Enable B\n18 --> Step\n20 --> Dir\n22 --> Write Data\n24 --> Write Enable\n26 <-- Track 00\n28 <-- Write Protect\n30 <-- Read Data\n32 --> Side / Head\n34 <-- Disk Change / Ready
+$Comp
+L Crystal_GND24 Q1
+U 1 1 5A44A2C6
+P 3725 4850
+F 0 "Q1" V 3775 5425 50  0000 R CNN
+F 1 "Crystal_GND24" V 3700 5825 50  0000 R CNN
+F 2 "" H 3725 4850 50  0001 C CNN
+F 3 "" H 3725 4850 50  0001 C CNN
+	1    3725 4850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3725 4700 3725 4550
+Wire Wire Line
+	3725 4550 4075 4550
+Wire Wire Line
+	4075 4550 4075 4800
+Wire Wire Line
+	4075 4800 4275 4800
+Wire Wire Line
+	4275 4900 4075 4900
+Wire Wire Line
+	4075 4900 4075 5125
+Wire Wire Line
+	4075 5125 3725 5125
+Wire Wire Line
+	3725 5125 3725 5000
+Text GLabel 1825 7825 0    60   Input ~ 0
++5VDC
+Text GLabel 1825 8125 0    60   Input ~ 0
+GND
+$Comp
+L GND #PWR?
+U 1 1 5A44A7FF
+P 1925 8275
+F 0 "#PWR?" H 1925 8025 50  0001 C CNN
+F 1 "GND" H 1930 8102 50  0001 C CNN
+F 2 "" H 1925 8275 50  0001 C CNN
+F 3 "" H 1925 8275 50  0001 C CNN
+	1    1925 8275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1925 8275 1925 8125
+Wire Wire Line
+	1925 8125 1825 8125
+Wire Wire Line
+	1825 7825 2100 7825
+$Comp
+L GND #PWR?
+U 1 1 5A44A98F
+P 8475 7200
+F 0 "#PWR?" H 8475 6950 50  0001 C CNN
+F 1 "GND" H 8480 7027 50  0001 C CNN
+F 2 "" H 8475 7200 50  0001 C CNN
+F 3 "" H 8475 7200 50  0001 C CNN
+	1    8475 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A44A9D8
+P 8575 7200
+F 0 "#PWR?" H 8575 6950 50  0001 C CNN
+F 1 "GND" H 8580 7027 50  0001 C CNN
+F 2 "" H 8575 7200 50  0001 C CNN
+F 3 "" H 8575 7200 50  0001 C CNN
+	1    8575 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A44A9E7
+P 8675 7200
+F 0 "#PWR?" H 8675 6950 50  0001 C CNN
+F 1 "GND" H 8680 7027 50  0001 C CNN
+F 2 "" H 8675 7200 50  0001 C CNN
+F 3 "" H 8675 7200 50  0001 C CNN
+	1    8675 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8375 3200 8375 3050
+Wire Wire Line
+	8375 3050 8775 3050
+Wire Wire Line
+	8775 3050 8775 3200
+Wire Wire Line
+	8675 3200 8675 3050
+Connection ~ 8675 3050
+Wire Wire Line
+	8575 2825 8575 3200
+Connection ~ 8575 3050
+Wire Wire Line
+	8475 3200 8475 3050
+Connection ~ 8475 3050
+Wire Wire Line
+	8575 2825 8750 2825
+Text GLabel 8750 2825 2    60   Input ~ 0
++3V3
+Wire Wire Line
+	12875 6100 13100 6100
+Wire Wire Line
+	12875 6200 13100 6200
+Text GLabel 13100 6100 2    50   Output ~ 0
+SCL
+Text GLabel 13100 6200 2    50   BiDi ~ 0
+SDA
 $EndSCHEMATC

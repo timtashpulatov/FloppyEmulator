@@ -137,7 +137,7 @@ Wire Wire Line
 Text Notes 1650 2125 0    60   ~ 0
 INPUT SIGNALS:\n\n- Drive Select 0\n- Drive Select 1\n- Motor Enable A\n- Motor Enable B\n- Dir\n- Side (INTERRUPT)\n- Step (INTERRUPT)\n- Write Gate (INTERRUPT)\n- Write Data (INTERRUPT)\n- Reserved ?
 Text Notes 3575 1650 0    60   ~ 0
-OUTPUT SIGNALS:\n\n- Index\n- Track 0\n- Write Protect\n- Read Data\n- Disk Change/Ready
+OUTPUT SIGNALS:\n\n- Index\n- Track 0\n- Write Protect\n- Read Data\n- Disk Change/Ready\n- Reserved ???
 Text Notes 1175 3025 0    60   ~ 0
 Amiga Drive ID readout:\n\n- turn Select off\n- turn Motor on and off\n- pulse Select and read ID bits on Ready line
 Text Notes 5800 2625 0    60   ~ 0
@@ -164,11 +164,11 @@ Wire Wire Line
 Wire Wire Line
 	4275 4900 4075 4900
 Wire Wire Line
-	4075 4900 4075 5125
+	4075 4900 4075 5025
 Wire Wire Line
-	4075 5125 3725 5125
+	4075 5025 3725 5025
 Wire Wire Line
-	3725 5125 3725 5000
+	3725 5025 3725 5000
 Text GLabel 1825 7825 0    60   Input ~ 0
 +5VDC
 Text GLabel 1825 8125 0    60   Input ~ 0
@@ -250,4 +250,82 @@ Text GLabel 13100 6100 2    50   Output ~ 0
 SCL
 Text GLabel 13100 6200 2    50   BiDi ~ 0
 SDA
+Text Notes 850  3825 0    60   ~ 0
+BUTTONS, LED(s) and BEEPER
+Text Notes 13700 6675 0    60   ~ 0
+MFM Flow
+Text Notes 3325 6450 0    60   ~ 0
+LCD
+Wire Wire Line
+	4275 5100 3125 5100
+Text Label 3125 5100 0    60   ~ 0
+LCD_DC
+Wire Wire Line
+	12875 5600 13650 5600
+Text Label 13650 5600 2    60   ~ 0
+LCD_RESET
+Wire Wire Line
+	12875 5700 13650 5700
+Wire Wire Line
+	12875 5800 13650 5800
+Wire Wire Line
+	12875 5900 13650 5900
+Wire Wire Line
+	12875 6000 13650 6000
+Text Label 13650 5700 2    60   ~ 0
+BUTTON1
+Text Label 13650 5800 2    60   ~ 0
+BUTTON2
+Text Label 13650 5900 2    60   ~ 0
+BUTTON3
+Text Label 13650 6000 2    60   ~ 0
+BUTTON4
+Wire Wire Line
+	4275 6600 2900 6600
+Wire Wire Line
+	4275 6700 2900 6700
+Wire Wire Line
+	4275 6800 2900 6800
+Text Label 2900 6600 0    60   ~ 0
+INDEX
+Text Label 2900 6700 0    60   ~ 0
+TRACK0
+Text Label 2900 6800 0    60   ~ 0
+WPROT
+Wire Wire Line
+	4275 5300 2900 5300
+Wire Wire Line
+	4275 5400 2900 5400
+Wire Wire Line
+	4275 5500 2900 5500
+Text Label 2900 5300 0    60   ~ 0
+SIDE
+Text Label 2900 5400 0    60   ~ 0
+STEP
+Text Label 2900 5500 0    60   ~ 0
+WRGATE
+Wire Wire Line
+	4275 5600 2900 5600
+Text Label 2900 5600 0    60   ~ 0
+WRDATA
+Wire Wire Line
+	12875 3600 13600 3600
+Wire Wire Line
+	12875 3700 13600 3700
+Wire Wire Line
+	12875 3800 13600 3800
+Wire Wire Line
+	12875 3900 13600 3900
+Text Label 13600 3600 2    60   ~ 0
+SEL0
+Text Label 13600 3700 2    60   ~ 0
+SEL1
+Text Label 13600 3800 2    60   ~ 0
+SEL2
+Text Label 13600 3900 2    60   ~ 0
+SEL3
+Wire Wire Line
+	12875 4400 13100 4400
+Text GLabel 13100 4400 2    50   Output ~ 0
+BEEP
 $EndSCHEMATC

@@ -1,35 +1,4 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:stm32
-LIBS:FloppyEmulator
+EESchema Schematic File Version 4
 LIBS:FloppyEmulator-cache
 EELAYER 26 0
 EELAYER END
@@ -46,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L STM32F405RGTx U1
+L FloppyEmulator-rescue:STM32F405RGTx-RESCUE-FloppyEmulator U1
 U 1 1 5A44968C
 P 8575 5200
 F 0 "U1" H 8575 2925 50  0000 C CNN
@@ -99,7 +68,7 @@ Amiga Drive ID readout:\n\n- turn Select off\n- turn Motor on and off\n- pulse S
 Text Notes 5800 2625 0    60   ~ 0
 2 ??? Disk Change Detect on Shugart Interface or Density Select on IBM PC\n4 ???\n6 ??? Can be Drive Select 3 on Amiga\n8 <-- Index\n10 --> Motor Enable A\n12 --> Drive Select B\n14 --> Drive Select A\n16 --> Motor Enable B\n18 --> Step\n20 --> Dir\n22 --> Write Data\n24 --> Write Enable\n26 <-- Track 00\n28 <-- Write Protect\n30 <-- Read Data\n32 --> Side / Head\n34 <-- Disk Change / Ready
 $Comp
-L Crystal_GND24 Q1
+L device1:Crystal_GND24 Q1
 U 1 1 5A44A2C6
 P 3725 4850
 F 0 "Q1" V 3775 5425 50  0000 R CNN
@@ -114,7 +83,7 @@ Text GLabel 1300 7175 0    60   Input ~ 0
 Text GLabel 1300 7475 0    60   Input ~ 0
 GND
 $Comp
-L GND #PWR01
+L power1:GND #PWR01
 U 1 1 5A44A7FF
 P 1400 7625
 F 0 "#PWR01" H 1400 7375 50  0001 C CNN
@@ -125,7 +94,7 @@ F 3 "" H 1400 7625 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L power1:GND #PWR02
 U 1 1 5A44A98F
 P 8475 7200
 F 0 "#PWR02" H 8475 6950 50  0001 C CNN
@@ -136,7 +105,7 @@ F 3 "" H 8475 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L power1:GND #PWR03
 U 1 1 5A44A9D8
 P 8575 7200
 F 0 "#PWR03" H 8575 6950 50  0001 C CNN
@@ -147,7 +116,7 @@ F 3 "" H 8575 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR04
+L power1:GND #PWR04
 U 1 1 5A44A9E7
 P 8675 7200
 F 0 "#PWR04" H 8675 6950 50  0001 C CNN
@@ -183,32 +152,22 @@ Text Label 13650 6000 2    60   ~ 0
 BUTTON4
 Text Label 2900 6600 0    60   ~ 0
 INDEX
-Text Label 2900 6700 0    60   ~ 0
-TRACK0
-Text Label 2900 6800 0    60   ~ 0
-WPROT
-Text Label 2900 5300 0    60   ~ 0
-SIDE
-Text Label 2900 5400 0    60   ~ 0
-STEP
-Text Label 2900 5500 0    60   ~ 0
-WRGATE
-Text Label 2900 5600 0    60   ~ 0
-WRDATA
-Text Label 13600 3600 2    60   ~ 0
-SEL0
-Text Label 13600 3700 2    60   ~ 0
-SEL1
 Text Label 13600 3800 2    60   ~ 0
-SEL2
+TRACK0
 Text Label 13600 3900 2    60   ~ 0
-SEL3
+WPROT
+Text Label 6675 10850 2    60   ~ 0
+SIDE
+Text Label 6500 8825 0    60   ~ 0
+STEP
+Text Label 13600 3700 2    60   ~ 0
+WRGATE
 Text GLabel 13100 4400 2    50   Output ~ 0
 BEEP
 Text Notes 14450 2425 0    60   ~ 0
 MOLEX 5027740891
 $Comp
-L Conn_01x09 X2
+L FloppyEmulator-rescue:Conn_01x09-RESCUE-FloppyEmulator X2
 U 1 1 5A44BF8F
 P 1250 6375
 F 0 "X2" H 1330 6462 50  0000 L CNN
@@ -221,7 +180,7 @@ $EndComp
 Text GLabel 1450 5975 2    60   Input ~ 0
 +3V3
 $Comp
-L GND #PWR05
+L power1:GND #PWR05
 U 1 1 5A44C183
 P 1450 6075
 F 0 "#PWR05" H 1450 5825 50  0001 C CNN
@@ -254,7 +213,7 @@ BACKLIGHT
 Text GLabel 2000 6775 2    50   Output ~ 0
 SPI3_MISO
 $Comp
-L Micro_SD_Card_Det X1
+L FloppyEmulator-rescue:Micro_SD_Card_Det-RESCUE-FloppyEmulator X1
 U 1 1 5A44D19C
 P 14925 1650
 F 0 "X1" H 14875 2557 50  0000 C CNN
@@ -265,7 +224,7 @@ F 3 "" H 14925 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L power1:GND #PWR06
 U 1 1 5A44D2BE
 P 15725 2150
 F 0 "#PWR06" H 15725 1900 50  0001 C CNN
@@ -276,7 +235,7 @@ F 3 "" H 15725 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L power1:GND #PWR07
 U 1 1 5A44D487
 P 14025 1750
 F 0 "#PWR07" H 14025 1500 50  0001 C CNN
@@ -287,7 +246,7 @@ F 3 "" H 14025 1750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR08
+L power1:GND #PWR08
 U 1 1 5A44D4E0
 P 14025 2150
 F 0 "#PWR08" H 14025 1900 50  0001 C CNN
@@ -298,7 +257,7 @@ F 3 "" H 14025 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_02x17_Odd_Even X3
+L FloppyEmulator-rescue:Conn_02x17_Odd_Even-RESCUE-FloppyEmulator X3
 U 1 1 5A44DC43
 P 2475 8300
 F 0 "X3" H 2525 9407 50  0000 C CNN
@@ -309,7 +268,7 @@ F 3 "" H 2475 8300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_01x04 X4
+L FloppyEmulator-rescue:Conn_01x04-RESCUE-FloppyEmulator X4
 U 1 1 5A44E1DD
 P 725 7950
 F 0 "X4" H 805 7987 50  0000 L CNN
@@ -336,27 +295,27 @@ ESD?\nPull-ups?
 Text Notes 825  4075 0    60   ~ 0
 SN74LV1T34 Logic Buffer Translator\nSN74LVC2G07 Dual Open Drain Buffer
 $Comp
-L GND #PWR09
+L power1:GND #PWR09
 U 1 1 5A4508B2
-P 3800 7775
-F 0 "#PWR09" H 3800 7525 50  0001 C CNN
-F 1 "GND" H 3805 7602 50  0001 C CNN
-F 2 "" H 3800 7775 50  0001 C CNN
-F 3 "" H 3800 7775 50  0001 C CNN
-	1    3800 7775
+P 3850 7775
+F 0 "#PWR09" H 3850 7525 50  0001 C CNN
+F 1 "GND" H 3855 7602 50  0001 C CNN
+F 2 "" H 3850 7775 50  0001 C CNN
+F 3 "" H 3850 7775 50  0001 C CNN
+	1    3850 7775
 	0    1    1    0   
 $EndComp
 Text Notes 3675 2075 0    60   ~ 0
 use open drain
 $Comp
-L SN74LVC2G07 U2
+L FloppyEmulator:SN74LVC2G07 U2
 U 1 1 5A450F7F
-P 4100 7775
-F 0 "U2" H 4100 8122 60  0000 C CNN
-F 1 "SN74LVC2G07" H 4100 8016 60  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4100 8025 60  0001 C CNN
-F 3 "" H 4100 8025 60  0001 C CNN
-	1    4100 7775
+P 4150 7775
+F 0 "U2" H 4150 8122 60  0000 C CNN
+F 1 "SN74LVC2G07" H 4150 8016 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4150 8025 60  0001 C CNN
+F 3 "" H 4150 8025 60  0001 C CNN
+	1    4150 7775
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -420,14 +379,14 @@ Wire Wire Line
 Wire Wire Line
 	8375 3200 8375 3050
 Wire Wire Line
-	8375 3050 8775 3050
+	8375 3050 8475 3050
 Wire Wire Line
 	8775 3050 8775 3200
 Wire Wire Line
 	8675 3200 8675 3050
 Connection ~ 8675 3050
 Wire Wire Line
-	8575 2825 8575 3200
+	8575 2825 8575 3050
 Connection ~ 8575 3050
 Wire Wire Line
 	8475 3200 8475 3050
@@ -493,69 +452,69 @@ Wire Wire Line
 Wire Wire Line
 	14025 2050 13275 2050
 $Comp
-L GND #PWR010
+L power1:GND #PWR010
 U 1 1 5A451245
-P 3825 8350
-F 0 "#PWR010" H 3825 8100 50  0001 C CNN
-F 1 "GND" H 3830 8177 50  0001 C CNN
-F 2 "" H 3825 8350 50  0001 C CNN
-F 3 "" H 3825 8350 50  0001 C CNN
-	1    3825 8350
+P 3850 8350
+F 0 "#PWR010" H 3850 8100 50  0001 C CNN
+F 1 "GND" H 3855 8177 50  0001 C CNN
+F 2 "" H 3850 8350 50  0001 C CNN
+F 3 "" H 3850 8350 50  0001 C CNN
+	1    3850 8350
 	0    1    1    0   
 $EndComp
 $Comp
-L SN74LVC2G07 U3
+L FloppyEmulator:SN74LVC2G07 U3
 U 1 1 5A45124B
-P 4125 8350
-F 0 "U3" H 4125 8697 60  0000 C CNN
-F 1 "SN74LVC2G07" H 4125 8591 60  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4125 8600 60  0001 C CNN
-F 3 "" H 4125 8600 60  0001 C CNN
-	1    4125 8350
+P 4150 8350
+F 0 "U3" H 4150 8697 60  0000 C CNN
+F 1 "SN74LVC2G07" H 4150 8591 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4150 8600 60  0001 C CNN
+F 3 "" H 4150 8600 60  0001 C CNN
+	1    4150 8350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2775 7900 3650 7900
+	2775 7900 3700 7900
 Wire Wire Line
-	3650 7900 3650 7675
+	3700 7900 3700 7675
 Wire Wire Line
-	3650 7675 3800 7675
+	3700 7675 3850 7675
 Wire Wire Line
-	2775 8000 3725 8000
+	2775 8000 3775 8000
 Wire Wire Line
-	3725 8000 3725 7875
+	3775 8000 3775 7875
 Wire Wire Line
-	3725 7875 3800 7875
+	3775 7875 3850 7875
 Wire Wire Line
-	2775 8100 3725 8100
+	2775 8100 3750 8100
 Wire Wire Line
-	3725 8100 3725 8250
+	3750 8100 3750 8250
 Wire Wire Line
-	3725 8250 3825 8250
+	3750 8250 3850 8250
 Wire Wire Line
-	3825 8450 3650 8450
+	3850 8450 3675 8450
 Wire Wire Line
-	3650 8450 3650 8200
+	3675 8450 3675 8200
 Wire Wire Line
-	3650 8200 2775 8200
-Text Label 4875 7675 2    60   ~ 0
+	3675 8200 2775 8200
+Text Label 4925 7675 2    60   ~ 0
 SEL0
-Text Label 4875 7875 2    60   ~ 0
+Text Label 4925 7875 2    60   ~ 0
 SEL1
-Text Label 4900 8250 2    60   ~ 0
+Text Label 4925 8250 2    60   ~ 0
 SEL2
-Text Label 4900 8450 2    60   ~ 0
+Text Label 4925 8450 2    60   ~ 0
 SEL3
 Wire Wire Line
-	4400 7675 4875 7675
+	4450 7675 4925 7675
 Wire Wire Line
-	4400 7875 4875 7875
+	4450 7875 4925 7875
 Wire Wire Line
-	4425 8250 4900 8250
+	4450 8250 4925 8250
 Wire Wire Line
-	4425 8450 4900 8450
+	4450 8450 4925 8450
 $Comp
-L SN74LVC2G07 U4
+L FloppyEmulator:SN74LVC2G07 U4
 U 1 1 5A451CA5
 P 4150 8925
 F 0 "U4" H 4150 9272 60  0000 C CNN
@@ -586,7 +545,7 @@ STEP
 Text Label 4900 9025 2    60   ~ 0
 DIR
 $Comp
-L SN74LVC2G07 U5
+L FloppyEmulator:SN74LVC2G07 U5
 U 1 1 5A4521D4
 P 4150 9500
 F 0 "U5" H 4150 9847 60  0000 C CNN
@@ -609,7 +568,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 9600 3850 9600
 $Comp
-L GND #PWR011
+L power1:GND #PWR011
 U 1 1 5A452411
 P 3850 8925
 F 0 "#PWR011" H 3850 8675 50  0001 C CNN
@@ -620,7 +579,7 @@ F 3 "" H 3850 8925 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR012
+L power1:GND #PWR012
 U 1 1 5A452430
 P 3850 9500
 F 0 "#PWR012" H 3850 9250 50  0001 C CNN
@@ -639,7 +598,7 @@ WRGATE
 Text Label 4900 9400 2    60   ~ 0
 WRDATA
 $Comp
-L SN74LVC2G07 U6
+L FloppyEmulator:SN74LVC2G07 U6
 U 1 1 5A453572
 P 4150 10075
 F 0 "U6" H 4150 9738 60  0000 C CNN
@@ -650,7 +609,7 @@ F 3 "" H 4150 10325 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L SN74LVC2G07 U7
+L FloppyEmulator:SN74LVC2G07 U7
 U 1 1 5A4535E1
 P 4150 10650
 F 0 "U7" H 4150 10313 60  0000 C CNN
@@ -685,7 +644,7 @@ Wire Wire Line
 Wire Wire Line
 	2900 10750 3850 10750
 $Comp
-L GND #PWR013
+L power1:GND #PWR013
 U 1 1 5A4538FF
 P 4450 10075
 F 0 "#PWR013" H 4450 9825 50  0001 C CNN
@@ -696,7 +655,7 @@ F 3 "" H 4450 10075 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR014
+L power1:GND #PWR014
 U 1 1 5A45393A
 P 4450 10650
 F 0 "#PWR014" H 4450 10400 50  0001 C CNN
@@ -717,7 +676,7 @@ Wire Wire Line
 Text Notes 13800 5775 0    60   ~ 0
 5-way SMD Joystick ALPS SKRHABE010
 $Comp
-L ALPS_5WAY SW1
+L FloppyEmulator:ALPS_5WAY SW1
 U 1 1 5A4545D4
 P 15125 6300
 F 0 "SW1" H 15125 6793 60  0000 C CNN
@@ -727,4 +686,115 @@ F 3 "" H 15125 6300 60  0001 C CNN
 	1    15125 6300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8675 3050 8775 3050
+Wire Wire Line
+	8575 3050 8675 3050
+Wire Wire Line
+	8575 3050 8575 3200
+Wire Wire Line
+	8475 3050 8575 3050
+Text Label 4900 9975 2    60   ~ 0
+TRACK0
+Text Label 4900 10175 2    60   ~ 0
+WPROT
+Text Label 4900 10750 2    60   ~ 0
+RDY
+Text Label 3750 4550 0    50   ~ 0
+OSC_IN
+Text Label 3775 5025 0    50   ~ 0
+OSC_OUT
+Text Label 2900 6700 0    60   ~ 0
+SEL0
+Text Label 2900 6800 0    60   ~ 0
+SEL1
+Text Label 2900 5300 0    60   ~ 0
+SEL2
+Text Label 2900 5400 0    60   ~ 0
+SEL3
+Text Label 2900 5500 0    60   ~ 0
+STEP
+Text Label 2900 5600 0    60   ~ 0
+DIR
+Text Label 13600 3600 2    60   ~ 0
+WRDATA
+$Comp
+L FloppyEmulator:SN74LVC2G07 U8
+U 1 1 5A476478
+P 5950 10950
+F 0 "U8" H 5950 11297 60  0000 C CNN
+F 1 "SN74LVC2G07" H 5950 11191 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 5950 11200 60  0001 C CNN
+F 3 "" H 5950 11200 60  0001 C CNN
+	1    5950 10950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2775 9000 2800 9000
+Wire Wire Line
+	2800 9000 2800 10850
+Wire Wire Line
+	2800 10850 5650 10850
+Wire Wire Line
+	6250 10850 6675 10850
+Text GLabel 4900 10550 2    50   Input ~ 0
+SPI2_MOSI
+Wire Wire Line
+	3850 10075 3750 10075
+Wire Wire Line
+	3750 10075 3750 10650
+Wire Wire Line
+	3750 10650 3850 10650
+Wire Wire Line
+	4450 9500 4500 9500
+Wire Wire Line
+	4500 9500 4500 8925
+Wire Wire Line
+	4500 7775 4450 7775
+Wire Wire Line
+	4450 8350 4500 8350
+Connection ~ 4500 8350
+Wire Wire Line
+	4500 8350 4500 7775
+Wire Wire Line
+	4450 8925 4500 8925
+Connection ~ 4500 8925
+Wire Wire Line
+	4500 8925 4500 8350
+Wire Wire Line
+	4500 7775 4500 7600
+Connection ~ 4500 7775
+Connection ~ 3750 10650
+$Comp
+L FloppyEmulator:SN74LVC2G07 U9
+U 1 1 5A4B6BB9
+P 4150 11275
+F 0 "U9" H 4150 10938 60  0000 C CNN
+F 1 "SN74LVC2G07" H 4150 11044 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 4150 11525 60  0001 C CNN
+F 3 "" H 4150 11525 60  0001 C CNN
+	1    4150 11275
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3750 11275 3850 11275
+Wire Wire Line
+	3750 10650 3750 11275
+Wire Wire Line
+	3750 11275 3750 11600
+Connection ~ 3750 11275
+Text Label 4900 11375 2    60   ~ 0
+INDEX
+Wire Wire Line
+	4450 11375 4900 11375
+Wire Wire Line
+	3850 11375 1925 11375
+Wire Wire Line
+	1925 11375 1925 7100
+Wire Wire Line
+	1925 7100 3075 7100
+Wire Wire Line
+	3075 7100 3075 7800
+Wire Wire Line
+	3075 7800 2775 7800
 $EndSCHEMATC

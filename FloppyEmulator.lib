@@ -1,4 +1,4 @@
-EESchema-LIBRARY Version 2.3
+EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
 # ALPS_5WAY
@@ -16,6 +16,8 @@ X C 3 -350 -100 100 R 50 50 1 1 I
 X B 4 350 100 100 L 50 50 1 1 I
 X COM 5 350 0 100 L 50 50 1 1 I
 X D 6 350 -100 100 L 50 50 1 1 I
+X ~ 7 0 -400 200 U 50 50 1 1 I
+X ~ 7 0 400 200 D 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #

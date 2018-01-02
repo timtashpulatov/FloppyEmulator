@@ -128,7 +128,7 @@ Text GLabel 13100 6100 2    50   Output ~ 0
 SCL
 Text GLabel 13100 6200 2    50   BiDi ~ 0
 SDA
-Text Notes 850  3825 0    60   ~ 0
+Text Notes 775  5025 0    60   ~ 0
 BUTTONS, LED(s) and BEEPER
 Text Notes 13700 6675 0    60   ~ 0
 MFM Flow
@@ -284,7 +284,7 @@ Text GLabel 14025 1450 0    50   Input ~ 0
 SPI1_MOSI
 Text Notes 12450 1325 0    60   ~ 0
 ESD?\nPull-ups?
-Text Notes 825  4075 0    60   ~ 0
+Text Notes 750  5275 0    60   ~ 0
 SN74LV1T34 Logic Buffer Translator\nSN74LVC2G07 Dual Open Drain Buffer
 $Comp
 L power1:GND #PWR09
@@ -830,8 +830,6 @@ Wire Wire Line
 	12875 6400 13650 6400
 Text Label 13650 6400 2    60   ~ 0
 LED1
-Wire Wire Line
-	4275 4000 3800 4000
 Text Label 3800 4000 0    60   ~ 0
 VBAT
 Wire Wire Line
@@ -1646,10 +1644,10 @@ Wire Wire Line
 Wire Wire Line
 	15150 3325 15150 3475
 $Comp
-L device1:C C?
+L device1:C C14
 U 1 1 5A7ABDC3
 P 14800 3625
-F 0 "C?" H 14915 3671 50  0000 L CNN
+F 0 "C14" H 14915 3671 50  0000 L CNN
 F 1 "2u2" H 14915 3580 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 14838 3475 50  0001 C CNN
 F 3 "" H 14800 3625 50  0001 C CNN
@@ -1657,10 +1655,10 @@ F 3 "" H 14800 3625 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power1:GND #PWR?
+L power1:GND #PWR032
 U 1 1 5A7ABFFF
 P 14800 3775
-F 0 "#PWR?" H 14800 3525 50  0001 C CNN
+F 0 "#PWR032" H 14800 3525 50  0001 C CNN
 F 1 "GND" H 14805 3602 50  0001 C CNN
 F 2 "" H 14800 3775 50  0001 C CNN
 F 3 "" H 14800 3775 50  0001 C CNN
@@ -1672,4 +1670,85 @@ Wire Wire Line
 Connection ~ 14800 3325
 Wire Wire Line
 	14800 3325 15150 3325
+$Comp
+L device1:C C15
+U 1 1 5A7D76FB
+P 3250 3875
+F 0 "C15" H 3365 3921 50  0000 L CNN
+F 1 "0,1" H 3365 3830 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3288 3725 50  0001 C CNN
+F 3 "" H 3250 3875 50  0001 C CNN
+	1    3250 3875
+	-1   0    0    1   
+$EndComp
+$Comp
+L power1:GND #PWR033
+U 1 1 5A7D78C7
+P 3250 4025
+F 0 "#PWR033" H 3250 3775 50  0001 C CNN
+F 1 "GND" H 3255 3852 50  0001 C CNN
+F 2 "" H 3250 4025 50  0001 C CNN
+F 3 "" H 3250 4025 50  0001 C CNN
+	1    3250 4025
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 4000 3550 3725
+Wire Wire Line
+	3550 3725 3250 3725
+Wire Wire Line
+	3550 4000 4275 4000
+Wire Wire Line
+	3250 3725 2925 3725
+Connection ~ 3250 3725
+Text GLabel 2925 3725 0    60   Input ~ 0
++3V3
+$Comp
+L device1:C C?
+U 1 1 5A819C2F
+P 1250 3950
+F 0 "C?" H 1365 3996 50  0000 L CNN
+F 1 "0,1" H 1365 3905 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1288 3800 50  0001 C CNN
+F 3 "" H 1250 3950 50  0001 C CNN
+	1    1250 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L device1:C C?
+U 1 1 5A819CD1
+P 1675 3950
+F 0 "C?" H 1790 3996 50  0000 L CNN
+F 1 "0,1" H 1790 3905 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1713 3800 50  0001 C CNN
+F 3 "" H 1675 3950 50  0001 C CNN
+	1    1675 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power1:GND #PWR?
+U 1 1 5A819D53
+P 1675 4100
+F 0 "#PWR?" H 1675 3850 50  0001 C CNN
+F 1 "GND" H 1680 3927 50  0001 C CNN
+F 2 "" H 1675 4100 50  0001 C CNN
+F 3 "" H 1675 4100 50  0001 C CNN
+	1    1675 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power1:GND #PWR?
+U 1 1 5A819DBE
+P 1250 4100
+F 0 "#PWR?" H 1250 3850 50  0001 C CNN
+F 1 "GND" H 1255 3927 50  0001 C CNN
+F 2 "" H 1250 4100 50  0001 C CNN
+F 3 "" H 1250 4100 50  0001 C CNN
+	1    1250 4100
+	-1   0    0    -1  
+$EndComp
+Text Label 1250 3800 0    60   ~ 0
+VCAP1
+Text Label 1675 3800 0    60   ~ 0
+VCAP2
 $EndSCHEMATC

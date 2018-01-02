@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.5)
+    (last_trace_width 0.2)
     (user_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.3)
@@ -336,6 +336,11 @@
       (net 12 /BUTTON4))
     (pad 5 smd rect (at 3.575 0 315) (size 1.35 1) (layers B.Cu B.Paste B.Mask)
       (net 8 GND))
+    (model ${KIPRJMOD}/3d/skrhabe010.wrl
+      (offset (xyz 0 0 2))
+      (scale (xyz 1.3937 1.3937 1.3937))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Crystals:Crystal_HC49-U_Vertical (layer F.Cu) (tedit 58CD2E9C) (tstamp 5A4C5042)
@@ -372,9 +377,9 @@
       (net 65 /OSC_OUT))
     (pad 2 thru_hole circle (at 4.88 0 180) (size 1.5 1.5) (drill 0.8) (layers *.Cu *.Mask)
       (net 66 /OSC_IN))
-    (model ${KISYS3DMOD}/Crystals.3dshapes/Crystal_HC49-U_Vertical.wrl
+    (model ${KISYS3DMOD}/Crystals.3dshapes/Crystal_HC49-4H_Vertical.wrl
       (at (xyz 0 0 0))
-      (scale (xyz 0.393701 0.393701 0.393701))
+      (scale (xyz 0.3937 0.3937 0.3937))
       (rotate (xyz 0 0 0))
     )
   )
@@ -559,6 +564,11 @@
       (net 8 GND))
     (model C:/Users/tnt23/Downloads/502774-0891_stp/microsd.wrl
       (offset (xyz 16.99999974468562 0 -0.4999999924907534))
+      (scale (xyz 0.3937 0.3937 0.3937))
+      (rotate (xyz 0 180 0))
+    )
+    (model ${KIPRJMOD}/3d/microsd.wrl
+      (offset (xyz 3 1 0))
       (scale (xyz 0.3937 0.3937 0.3937))
       (rotate (xyz 0 180 0))
     )
@@ -2207,6 +2217,11 @@
       (net 90 "Net-(BA1-Pad1)"))
     (pad 2 thru_hole circle (at 3.25 0 270) (size 1.524 1.524) (drill 0.8) (layers *.Cu *.Mask)
       (net 91 "Net-(BA1-Pad2)"))
+    (model ${KIPRJMOD}/3d/buzzer_tmb.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Capacitors_SMD:C_0805 (layer F.Cu) (tedit 58AA8463) (tstamp 5A4CA5AB)

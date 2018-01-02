@@ -64,14 +64,14 @@ Amiga Drive ID readout:\n\n- turn Select off\n- turn Motor on and off\n- pulse S
 Text Notes 5800 2625 0    60   ~ 0
 2 ??? Disk Change Detect on Shugart Interface or Density Select on IBM PC\n4 ???\n6 ??? Can be Drive Select 3 on Amiga\n8 <-- Index\n10 --> Motor Enable A\n12 --> Drive Select B\n14 --> Drive Select A\n16 --> Motor Enable B\n18 --> Step\n20 --> Dir\n22 --> Write Data\n24 --> Write Enable\n26 <-- Track 00\n28 <-- Write Protect\n30 <-- Read Data\n32 --> Side / Head\n34 <-- Disk Change / Ready
 $Comp
-L device1:Crystal_GND24 Q1
+L device1:Crystal Q1
 U 1 1 5A44A2C6
-P 3725 4850
-F 0 "Q1" V 3775 5425 50  0000 R CNN
-F 1 "Crystal_GND24" V 3700 5825 50  0000 R CNN
-F 2 "" H 3725 4850 50  0001 C CNN
-F 3 "" H 3725 4850 50  0001 C CNN
-	1    3725 4850
+P 3650 4800
+F 0 "Q1" V 3700 5375 50  0000 R CNN
+F 1 "Crystal_GND24" V 3625 5775 50  0000 R CNN
+F 2 "Crystals:Crystal_SMD_HC49-SD" H 3650 4800 50  0001 C CNN
+F 3 "" H 3650 4800 50  0001 C CNN
+	1    3650 4800
 	0    -1   -1   0   
 $EndComp
 Text GLabel 1200 7850 2    60   Input ~ 0
@@ -343,7 +343,7 @@ Wire Wire Line
 Wire Wire Line
 	4275 6500 4000 6500
 Wire Wire Line
-	3725 4700 3725 4550
+	3650 4650 3725 4550
 Wire Wire Line
 	3725 4550 4075 4550
 Wire Wire Line
@@ -357,7 +357,7 @@ Wire Wire Line
 Wire Wire Line
 	4075 5025 3725 5025
 Wire Wire Line
-	3725 5025 3725 5000
+	3725 5025 3650 4950
 Wire Wire Line
 	1175 8200 1175 8050
 Wire Wire Line
@@ -1142,4 +1142,359 @@ F 3 "" H 2150 9250 50  0001 C CNN
 	1    2150 9250
 	-1   0    0    -1  
 $EndComp
+$Comp
+L regul1:AP1117-15 U10
+U 1 1 5A4E6494
+P 9425 9000
+F 0 "U10" H 9425 9242 50  0000 C CNN
+F 1 "AP1117-15" H 9425 9151 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3_TabPin2" H 9425 9200 50  0001 C CNN
+F 3 "http://www.diodes.com/datasheets/AP1117.pdf" H 9525 8750 50  0001 C CNN
+	1    9425 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power1:GND #PWR021
+U 1 1 5A4E668D
+P 9425 9300
+F 0 "#PWR021" H 9425 9050 50  0001 C CNN
+F 1 "GND" H 9430 9127 50  0001 C CNN
+F 2 "" H 9425 9300 50  0001 C CNN
+F 3 "" H 9425 9300 50  0001 C CNN
+	1    9425 9300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device1:C C6
+U 1 1 5A4E68DB
+P 8800 9225
+F 0 "C6" H 8915 9271 50  0000 L CNN
+F 1 "2u2" H 8915 9180 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 8838 9075 50  0001 C CNN
+F 3 "" H 8800 9225 50  0001 C CNN
+	1    8800 9225
+	1    0    0    -1  
+$EndComp
+$Comp
+L power1:GND #PWR022
+U 1 1 5A4E6A28
+P 8800 9375
+F 0 "#PWR022" H 8800 9125 50  0001 C CNN
+F 1 "GND" H 8805 9202 50  0001 C CNN
+F 2 "" H 8800 9375 50  0001 C CNN
+F 3 "" H 8800 9375 50  0001 C CNN
+	1    8800 9375
+	1    0    0    -1  
+$EndComp
+$Comp
+L device1:C C7
+U 1 1 5A4E6A65
+P 9925 9250
+F 0 "C7" H 10040 9296 50  0000 L CNN
+F 1 "2u2" H 10040 9205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 9963 9100 50  0001 C CNN
+F 3 "" H 9925 9250 50  0001 C CNN
+	1    9925 9250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power1:GND #PWR023
+U 1 1 5A4E6AD1
+P 9925 9400
+F 0 "#PWR023" H 9925 9150 50  0001 C CNN
+F 1 "GND" H 9930 9227 50  0001 C CNN
+F 2 "" H 9925 9400 50  0001 C CNN
+F 3 "" H 9925 9400 50  0001 C CNN
+	1    9925 9400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9125 9000 8800 9000
+Wire Wire Line
+	8800 9075 8800 9000
+Connection ~ 8800 9000
+Wire Wire Line
+	8800 9000 8525 9000
+Wire Wire Line
+	9725 9000 9925 9000
+Wire Wire Line
+	9925 9100 9925 9000
+Connection ~ 9925 9000
+Wire Wire Line
+	9925 9000 10325 9000
+Text GLabel 8525 9000 0    60   Input ~ 0
++5VDC
+Text GLabel 10325 9000 2    60   Output ~ 0
++3V3
+$Comp
+L power1:GND #PWR024
+U 1 1 5A5228E0
+P 4450 11275
+F 0 "#PWR024" H 4450 11025 50  0001 C CNN
+F 1 "GND" H 4455 11102 50  0001 C CNN
+F 2 "" H 4450 11275 50  0001 C CNN
+F 3 "" H 4450 11275 50  0001 C CNN
+	1    4450 11275
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power1:GND #PWR025
+U 1 1 5A52291F
+P 5650 10950
+F 0 "#PWR025" H 5650 10700 50  0001 C CNN
+F 1 "GND" H 5655 10777 50  0001 C CNN
+F 2 "" H 5650 10950 50  0001 C CNN
+F 3 "" H 5650 10950 50  0001 C CNN
+	1    5650 10950
+	0    1    1    0   
+$EndComp
+$Comp
+L device1:C C8
+U 1 1 5A522ED8
+P 11000 2625
+F 0 "C8" H 11115 2671 50  0000 L CNN
+F 1 "0,1" H 11115 2580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 11038 2475 50  0001 C CNN
+F 3 "" H 11000 2625 50  0001 C CNN
+	1    11000 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L device1:C C9
+U 1 1 5A522F3C
+P 11375 2625
+F 0 "C9" H 11490 2671 50  0000 L CNN
+F 1 "0,1" H 11490 2580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 11413 2475 50  0001 C CNN
+F 3 "" H 11375 2625 50  0001 C CNN
+	1    11375 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L device1:C C10
+U 1 1 5A52306A
+P 11725 2625
+F 0 "C10" H 11840 2671 50  0000 L CNN
+F 1 "0,1" H 11840 2580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 11763 2475 50  0001 C CNN
+F 3 "" H 11725 2625 50  0001 C CNN
+	1    11725 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L device1:C C11
+U 1 1 5A5230C6
+P 12075 2625
+F 0 "C11" H 12190 2671 50  0000 L CNN
+F 1 "0,1" H 12190 2580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 12113 2475 50  0001 C CNN
+F 3 "" H 12075 2625 50  0001 C CNN
+	1    12075 2625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10625 2325 11000 2325
+Wire Wire Line
+	12075 2325 12075 2475
+Connection ~ 10625 2325
+Wire Wire Line
+	12075 2775 12075 2850
+Wire Wire Line
+	12075 2850 11725 2850
+Connection ~ 10625 2850
+Wire Wire Line
+	11000 2475 11000 2325
+Connection ~ 11000 2325
+Wire Wire Line
+	11000 2325 11375 2325
+Wire Wire Line
+	11375 2475 11375 2325
+Connection ~ 11375 2325
+Wire Wire Line
+	11375 2325 11725 2325
+Wire Wire Line
+	11725 2475 11725 2325
+Connection ~ 11725 2325
+Wire Wire Line
+	11725 2325 12075 2325
+Wire Wire Line
+	11000 2775 11000 2850
+Connection ~ 11000 2850
+Wire Wire Line
+	11000 2850 10625 2850
+Wire Wire Line
+	11375 2775 11375 2850
+Connection ~ 11375 2850
+Wire Wire Line
+	11375 2850 11000 2850
+Wire Wire Line
+	11725 2775 11725 2850
+Connection ~ 11725 2850
+Wire Wire Line
+	11725 2850 11375 2850
+Wire Wire Line
+	4500 9500 6375 9500
+Wire Wire Line
+	6375 9500 6375 10950
+Wire Wire Line
+	6375 10950 6250 10950
+Connection ~ 4500 9500
+$Comp
+L device1:C C12
+U 1 1 5A5B3ACC
+P 12450 2625
+F 0 "C12" H 12565 2671 50  0000 L CNN
+F 1 "0,1" H 12565 2580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 12488 2475 50  0001 C CNN
+F 3 "" H 12450 2625 50  0001 C CNN
+	1    12450 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L device1:C C13
+U 1 1 5A5B3AD2
+P 12825 2625
+F 0 "C13" H 12940 2671 50  0000 L CNN
+F 1 "0,1" H 12940 2580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 12863 2475 50  0001 C CNN
+F 3 "" H 12825 2625 50  0001 C CNN
+	1    12825 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L device1:C C14
+U 1 1 5A5B3AD8
+P 13175 2625
+F 0 "C14" H 13290 2671 50  0000 L CNN
+F 1 "0,1" H 13290 2580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 13213 2475 50  0001 C CNN
+F 3 "" H 13175 2625 50  0001 C CNN
+	1    13175 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L device1:C C15
+U 1 1 5A5B3ADE
+P 13525 2625
+F 0 "C15" H 13640 2671 50  0000 L CNN
+F 1 "0,1" H 13640 2580 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 13563 2475 50  0001 C CNN
+F 3 "" H 13525 2625 50  0001 C CNN
+	1    13525 2625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12075 2325 12450 2325
+Wire Wire Line
+	13525 2325 13525 2475
+Wire Wire Line
+	13525 2775 13525 2850
+Wire Wire Line
+	13525 2850 13175 2850
+Wire Wire Line
+	12450 2475 12450 2325
+Connection ~ 12450 2325
+Wire Wire Line
+	12450 2325 12825 2325
+Wire Wire Line
+	12825 2475 12825 2325
+Connection ~ 12825 2325
+Wire Wire Line
+	12825 2325 13175 2325
+Wire Wire Line
+	13175 2475 13175 2325
+Connection ~ 13175 2325
+Wire Wire Line
+	13175 2325 13525 2325
+Wire Wire Line
+	12450 2775 12450 2850
+Connection ~ 12450 2850
+Wire Wire Line
+	12450 2850 12075 2850
+Wire Wire Line
+	12825 2775 12825 2850
+Connection ~ 12825 2850
+Wire Wire Line
+	12825 2850 12450 2850
+Wire Wire Line
+	13175 2775 13175 2850
+Connection ~ 13175 2850
+Wire Wire Line
+	13175 2850 12825 2850
+Connection ~ 12075 2325
+Connection ~ 12075 2850
+$Comp
+L device1:C C16
+U 1 1 5A5C6752
+P 800 9675
+F 0 "C16" H 915 9721 50  0000 L CNN
+F 1 "0,1" H 915 9630 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 838 9525 50  0001 C CNN
+F 3 "" H 800 9675 50  0001 C CNN
+	1    800  9675
+	1    0    0    -1  
+$EndComp
+$Comp
+L device1:C C17
+U 1 1 5A5C6B21
+P 1125 9675
+F 0 "C17" H 1240 9721 50  0000 L CNN
+F 1 "0,1" H 1240 9630 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1163 9525 50  0001 C CNN
+F 3 "" H 1125 9675 50  0001 C CNN
+	1    1125 9675
+	1    0    0    -1  
+$EndComp
+$Comp
+L device1:C C18
+U 1 1 5A5C6B8D
+P 1475 9675
+F 0 "C18" H 1590 9721 50  0000 L CNN
+F 1 "0,1" H 1590 9630 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1513 9525 50  0001 C CNN
+F 3 "" H 1475 9675 50  0001 C CNN
+	1    1475 9675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  9525 800  9425
+Wire Wire Line
+	800  9425 1125 9425
+Wire Wire Line
+	1475 9425 1475 9525
+Wire Wire Line
+	800  9825 800  9900
+Wire Wire Line
+	800  9900 1125 9900
+Wire Wire Line
+	1475 9900 1475 9825
+Wire Wire Line
+	1125 9825 1125 9900
+Connection ~ 1125 9900
+Wire Wire Line
+	1125 9900 1475 9900
+Wire Wire Line
+	1125 9525 1125 9425
+Connection ~ 1125 9425
+Wire Wire Line
+	1125 9425 1475 9425
+Text GLabel 1125 9250 1    60   Input ~ 0
++5VDC
+Wire Wire Line
+	1125 9250 1125 9425
+$Comp
+L power1:GND #PWR026
+U 1 1 5A629D80
+P 1125 9900
+F 0 "#PWR026" H 1125 9650 50  0001 C CNN
+F 1 "GND" H 1130 9727 50  0001 C CNN
+F 2 "" H 1125 9900 50  0001 C CNN
+F 3 "" H 1125 9900 50  0001 C CNN
+	1    1125 9900
+	-1   0    0    -1  
+$EndComp
+Text Label 13175 6000 2    60   ~ 0
+SIDE
+Wire Wire Line
+	12875 6000 13175 6000
 $EndSCHEMATC

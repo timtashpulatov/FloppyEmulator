@@ -124,9 +124,9 @@ F 3 "" H 8675 7200 50  0001 C CNN
 $EndComp
 Text GLabel 8750 2825 2    60   Input ~ 0
 +3V3
-Text GLabel 13100 6100 2    50   Output ~ 0
+Text GLabel 13950 6100 2    50   Output ~ 0
 SCL
-Text GLabel 13100 6200 2    50   BiDi ~ 0
+Text GLabel 13950 6200 2    50   BiDi ~ 0
 SDA
 Text Notes 775  5025 0    60   ~ 0
 BUTTONS, LED(s) and BEEPER
@@ -136,9 +136,9 @@ Text Notes 3325 6450 0    60   ~ 0
 LCD
 Text Label 13650 5600 2    60   ~ 0
 LCD_DC
-Text Label 3125 5100 0    60   ~ 0
+Text Label 3825 5100 0    50   ~ 0
 LCD_RESET
-Text Label 13650 6300 2    60   ~ 0
+Text Label 13225 6300 2    50   ~ 0
 BUTTON1
 Text Label 13650 5400 2    60   ~ 0
 BUTTON2
@@ -343,9 +343,9 @@ Wire Wire Line
 Wire Wire Line
 	4275 6500 4000 6500
 Wire Wire Line
-	3650 4650 3725 4550
+	3650 4650 3650 4550
 Wire Wire Line
-	3725 4550 4075 4550
+	3650 4550 4075 4550
 Wire Wire Line
 	4075 4550 4075 4800
 Wire Wire Line
@@ -353,11 +353,7 @@ Wire Wire Line
 Wire Wire Line
 	4275 4900 4075 4900
 Wire Wire Line
-	4075 4900 4075 5025
-Wire Wire Line
-	4075 5025 3725 5025
-Wire Wire Line
-	3725 5025 3650 4950
+	4075 4900 4075 4950
 Wire Wire Line
 	7475 8950 7475 8800
 Wire Wire Line
@@ -382,11 +378,11 @@ Connection ~ 8475 3050
 Wire Wire Line
 	8575 2825 8750 2825
 Wire Wire Line
-	12875 6100 13100 6100
+	12875 6100 13400 6100
 Wire Wire Line
-	12875 6200 13100 6200
+	12875 6200 13700 6200
 Wire Wire Line
-	4275 5100 3125 5100
+	4275 5100 3825 5100
 Wire Wire Line
 	12875 5600 13650 5600
 Wire Wire Line
@@ -659,7 +655,7 @@ Wire Wire Line
 	4450 10550 4900 10550
 Wire Wire Line
 	4450 10750 4900 10750
-Text Notes 13800 5775 0    60   ~ 0
+Text Notes 14725 6975 0    60   ~ 0
 5-way SMD Joystick ALPS SKRHABE010
 $Comp
 L FloppyEmulator:ALPS_5WAY SW1
@@ -686,9 +682,9 @@ Text Label 4900 10175 2    60   ~ 0
 WPROT
 Text Label 4900 10750 2    60   ~ 0
 RDY
-Text Label 3750 4550 0    50   ~ 0
+Text Label 4075 4550 2    50   ~ 0
 OSC_IN
-Text Label 3775 5025 0    50   ~ 0
+Text Label 3725 4950 0    50   ~ 0
 OSC_OUT
 Text Label 2900 6700 0    60   ~ 0
 SEL0
@@ -803,7 +799,7 @@ Wire Wire Line
 Text Label 13650 5300 2    60   ~ 0
 BUTTON5
 Wire Wire Line
-	12875 6300 13650 6300
+	12875 6300 13225 6300
 Text Label 14775 6300 2    60   ~ 0
 BUTTON5
 Text Label 14775 6400 2    60   ~ 0
@@ -827,8 +823,8 @@ Wire Wire Line
 Wire Wire Line
 	3750 11275 3750 11775
 Wire Wire Line
-	12875 6400 13650 6400
-Text Label 13650 6400 2    60   ~ 0
+	12875 6400 13225 6400
+Text Label 13225 6400 2    50   ~ 0
 LED1
 Text Label 3800 4000 0    60   ~ 0
 VBAT
@@ -1479,10 +1475,10 @@ Wire Wire Line
 	3500 4950 3650 4950
 Connection ~ 3650 4950
 Wire Wire Line
-	3500 4500 3725 4500
+	3500 4500 3650 4500
 Wire Wire Line
-	3725 4500 3725 4550
-Connection ~ 3725 4550
+	3650 4500 3650 4550
+Connection ~ 3650 4550
 $Comp
 L power1:GND #PWR027
 U 1 1 5A66A249
@@ -1564,7 +1560,7 @@ F 3 "" H 13675 7350 50  0001 C CNN
 	1    13675 7350
 	-1   0    0    1   
 $EndComp
-Text GLabel 13675 7200 2    60   Input ~ 0
+Text GLabel 13825 7075 2    60   Input ~ 0
 +5VDC
 $Comp
 L power1:GND #PWR030
@@ -1704,10 +1700,10 @@ Connection ~ 3250 3725
 Text GLabel 2925 3725 0    60   Input ~ 0
 +3V3
 $Comp
-L device1:C C?
+L device1:C C21
 U 1 1 5A819C2F
 P 1250 3950
-F 0 "C?" H 1365 3996 50  0000 L CNN
+F 0 "C21" H 1365 3996 50  0000 L CNN
 F 1 "0,1" H 1365 3905 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 1288 3800 50  0001 C CNN
 F 3 "" H 1250 3950 50  0001 C CNN
@@ -1715,10 +1711,10 @@ F 3 "" H 1250 3950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L device1:C C?
+L device1:C C22
 U 1 1 5A819CD1
 P 1675 3950
-F 0 "C?" H 1790 3996 50  0000 L CNN
+F 0 "C22" H 1790 3996 50  0000 L CNN
 F 1 "0,1" H 1790 3905 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 1713 3800 50  0001 C CNN
 F 3 "" H 1675 3950 50  0001 C CNN
@@ -1726,10 +1722,10 @@ F 3 "" H 1675 3950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power1:GND #PWR?
+L power1:GND #PWR034
 U 1 1 5A819D53
 P 1675 4100
-F 0 "#PWR?" H 1675 3850 50  0001 C CNN
+F 0 "#PWR034" H 1675 3850 50  0001 C CNN
 F 1 "GND" H 1680 3927 50  0001 C CNN
 F 2 "" H 1675 4100 50  0001 C CNN
 F 3 "" H 1675 4100 50  0001 C CNN
@@ -1737,10 +1733,10 @@ F 3 "" H 1675 4100 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power1:GND #PWR?
+L power1:GND #PWR035
 U 1 1 5A819DBE
 P 1250 4100
-F 0 "#PWR?" H 1250 3850 50  0001 C CNN
+F 0 "#PWR035" H 1250 3850 50  0001 C CNN
 F 1 "GND" H 1255 3927 50  0001 C CNN
 F 2 "" H 1250 4100 50  0001 C CNN
 F 3 "" H 1250 4100 50  0001 C CNN
@@ -1751,4 +1747,53 @@ Text Label 1250 3800 0    60   ~ 0
 VCAP1
 Text Label 1675 3800 0    60   ~ 0
 VCAP2
+Wire Wire Line
+	3650 4950 4075 4950
+Wire Wire Line
+	13825 7075 13675 7075
+Wire Wire Line
+	13675 7075 13675 7200
+$Comp
+L device1:R R?
+U 1 1 5A590DB3
+P 13400 5900
+F 0 "R?" V 13193 5900 50  0000 C CNN
+F 1 "DNF" V 13284 5900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 13330 5900 50  0001 C CNN
+F 3 "" H 13400 5900 50  0001 C CNN
+	1    13400 5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L device1:R R?
+U 1 1 5A590F04
+P 13700 5900
+F 0 "R?" V 13493 5900 50  0000 C CNN
+F 1 "DNF" V 13584 5900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 13630 5900 50  0001 C CNN
+F 3 "" H 13700 5900 50  0001 C CNN
+	1    13700 5900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	13400 6050 13400 6100
+Connection ~ 13400 6100
+Wire Wire Line
+	13400 6100 13950 6100
+Wire Wire Line
+	13700 6050 13700 6200
+Connection ~ 13700 6200
+Wire Wire Line
+	13700 6200 13950 6200
+Wire Wire Line
+	13400 5750 13400 5700
+Wire Wire Line
+	13400 5700 13700 5700
+Wire Wire Line
+	13700 5750 13700 5700
+Connection ~ 13700 5700
+Wire Wire Line
+	13700 5700 13950 5700
+Text GLabel 13950 5700 2    60   Input ~ 0
++3V3
 $EndSCHEMATC

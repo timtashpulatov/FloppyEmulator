@@ -1,0 +1,3 @@
+- Wrong pin connnected to +5V on Floppy power connector
+- RDY not routed
+- Missing pullups for input signals
